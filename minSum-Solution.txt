@@ -1,0 +1,31 @@
+public static int minSum(List<Integer> num, int k) {
+           
+           if (num.size() == 0) {
+                return 0;
+            }
+    
+            int index = 0;
+            int max = Integer.MAX_VALUE;
+            while (k > 0) {
+                int currentValue = num.get(index);
+                if (currentValue <= max) {
+                    num.sort(Comparator.reverseOrder());
+                    index = 0;
+                    max = num.get(0) / 2;
+                    continue;
+                }
+                k--;
+    
+                int roundUp = currentValue & 1;
+                currentValue /= 2;
+                currentValue += roundUp;
+    
+                num.set(index, currentValue);
+                if (index + 1 < num.size()) {
+                    index++;
+                }
+            }
+            int p = num.stream().mapToInt(a->a).sum();
+            return p;
+        }
+

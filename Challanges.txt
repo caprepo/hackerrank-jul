@@ -1,0 +1,17 @@
+Question:1
+============
+Find out the numerology number for the given name as mentioned below:
+
+Each alphabet represented with one number as given : 
+A,I,J,Q,Y - 1
+B,K,R-2
+C,G,L,S - 3
+D,M,T - 4
+E,H,N,X -5
+U,V,W-6
+O,Z-7
+F-P-8
+
+If input String is ""S. KANAPATHY"" then output should be 4.
+Ex:
+S. KANAPATHY ==> 3+2+1+5+1+8+1+4+5+1=31 (3+1) = 4
